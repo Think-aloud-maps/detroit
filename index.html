@@ -212,8 +212,8 @@
             { title: "Current Time", info: "2:51 PM." },
             { title: "Address of Origin", info: "13140 Foley St, Detroit, MI 48227." },
             { title: "Address of Destination", info: "900 Dickerson Ave, Detroit, MI 48215." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "14.99 miles." },
+            { title: "Estimated Time to Destination", info: "28 minutes." },
             { title: "State of Charge of Battery", info: "54% charge." },
             { title: "Range of Current Battery", info: "162 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "122 miles." },
@@ -231,10 +231,10 @@
                 name: 'Stroh Parking Garage',
 
                 location: '600 River Pl Dr, Detroit, MI 48207, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '11.06',
+                originTime: '13',
+                destDistance: '4.19',
+                destTime: '13',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Dearborn Satellite and Dish Network',
 
                 location: '7651 Schaefer rd MI',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '4.98',
+                originTime: '9',
+                destDistance: '10.58',
+                destTime: '21',
 
                 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
